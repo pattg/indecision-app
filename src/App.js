@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from '../src/Components/Header';
+import Action from '../src/Components/Action';
+import AddOption from '../src/Components/AddOption';
+import Options from '../src/Components/Options';
 
 class App extends Component {
   render() {
+    const title = 'Indecision App';
+    const subtitle = 'What to do next';
+    const options = ['one', 'two', 'three'];
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header title={title} subtitle={subtitle} />
+        <Action />
+        <Options options={options} />
+        <AddOption />
       </div>
     );
   }
