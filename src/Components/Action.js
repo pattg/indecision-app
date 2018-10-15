@@ -1,14 +1,13 @@
 import React from 'react';
 
-class Action extends React.Component {
-  handleClick() {}
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleClick}>What To Do next?</button>
-      </div>
-    );
-  }
-}
+const Action = props => {
+  return (
+    <div>
+      <button onClick={props.handlePick} disabled={!props.hasOptions}>
+        What To Do next?
+      </button>
+    </div>
+  );
+};
 
 export default Action;
