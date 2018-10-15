@@ -2,9 +2,9 @@ import React from 'react';
 import Option from './Option';
 
 class Options extends React.Component {
-  handleRemoveAll() {
+  handleRemoveAll = () => {
     console.log('Remove all');
-  }
+  };
   render() {
     return (
       <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 class AddOption extends React.Component {
-  handleAddOption(e) {
+  handleAddOption = e => {
     e.preventDefault();
 
     const option = e.target.elements.option.value.trim();
@@ -9,7 +9,7 @@ class AddOption extends React.Component {
     if (option) {
       console.log(option);
     }
-  }
+  };
   render() {
     return (
       <div>
