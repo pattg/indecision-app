@@ -1,10 +1,11 @@
 import React from 'react';
 
 class Action extends React.Component {
+  handleClick() {}
   render() {
     return (
       <div>
-        <button>What To Do next?</button>
+        <button onClick={this.handleClick}>What To Do next?</button>
       </div>
     );
   }
