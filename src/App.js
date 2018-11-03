@@ -7,7 +7,7 @@ import Options from '../src/Components/Options';
 
 class App extends Component {
   state = {
-    options: []
+    options: this.props.options
   };
 
   handleDeleteOptions = () => {
@@ -38,12 +38,11 @@ class App extends Component {
   };
 
   render() {
-    const title = 'Indecision App';
-    const subtitle = 'What to do next';
+    const subtitle = 'What to do next?';
 
     return (
       <div className="App">
-        <Header title={title} subtitle={subtitle} />
+        <Header subtitle={subtitle} />
         <Action
           hasOptions={this.state.options.length > 0}
           handlePick={this.handlePick}
@@ -57,5 +56,9 @@ class App extends Component {
     );
   }
 }
+
+App.defaultProps = {
+  options: []
+};
 
 export default App;
