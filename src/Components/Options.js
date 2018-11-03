@@ -6,7 +6,11 @@ const Options = props => {
     <div>
       <button onClick={props.handleDeleteOptions}>Remove all</button>
       {props.options.map(option => (
-        <Option key={option} optionText={option} />
+        <Option
+          key={option}
+          optionText={option}
+          handleDeleteOption={props.handleDeleteOption}
+        />
       ))}
     </div>
   );

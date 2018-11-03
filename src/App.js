@@ -11,11 +11,23 @@ class App extends Component {
   };
 
   handleDeleteOptions = () => {
-    this.setState(() => {
-      return {
-        options: []
-      };
-    });
+    // this.setState(() => {
+    //   return {
+    //     options: []
+    //   };
+    // });
+
+    this.setState(() => ({
+      options: []
+    }));
+  };
+
+  handleDeleteOption = optionToRemove => {
+    this.setState(prevState => ({
+      options: prevState.options.filter(option => {
+        return optionToRemove !== option;
+      })
+    }));
   };
 
   handlePick = () => {
@@ -30,11 +42,14 @@ class App extends Component {
       return 'this option already exists';
     }
 
-    this.setState(prevState => {
-      return {
-        options: prevState.options.concat(option)
-      };
-    });
+    // this.setState(prevState => {
+    //   return {
+    //     options: prevState.options.concat(option)
+    //   };
+    // });
+    this.setState(prevState => ({
+      options: prevState.options.concat(option)
+    }));
   };
 
   render() {
@@ -50,6 +65,7 @@ class App extends Component {
         <Options
           options={this.state.options}
           handleDeleteOptions={this.handleDeleteOptions}
+          handleDeleteOption={this.handleDeleteOption}
         />
         <AddOption handleAddOption={this.handleAddOption} />
       </div>
