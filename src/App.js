@@ -1,14 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Header from '../src/Components/Header';
 import Action from '../src/Components/Action';
 import AddOption from '../src/Components/AddOption';
 import Options from '../src/Components/Options';
 
-class App extends Component {
+class App extends React.Component {
   state = {
     options: this.props.options
   };
+
+  componentDidMount() {
+    try {
+      const json = localStorage.getItem('options');
+      const options = JSON.parse(json);
+      if (options) {
+        this.setState(() => ({ options: options }));
+      }
+    } catch (e) {
+      // Do nothing at all
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.options.length !== this.state.options.length) {
+      const json = JSON.stringify(this.state.options);
+      localStorage.setItem('options', json);
+    }
+  }
 
   handleDeleteOptions = () => {
     // this.setState(() => {
