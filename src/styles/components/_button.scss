@@ -1,7 +1,7 @@
 .big-button {
-  background: $blue;
+  background: $green;
   border: none;
-  border-bottom: 0.5rem solid darken($blue, 40%);
+  border-bottom: 0.7rem solid darken($green, 40%);
   color: white;
   font-weight: bold;
   font-size: $l-size;
@@ -15,9 +15,9 @@
 }
 
 .button {
-  background-color: $blue;
+  background-color: $green;
   border: none;
-  border-bottom: 0.3rem solid darken($blue, 40%);
+  border-bottom: 0.5rem solid darken($green, 40%);
   color: white;
   font-weight: 500;
   padding: $s-size;
@@ -26,6 +26,6 @@
 .button--link {
   background: none;
   border: none;
-  color: $off-white;
+  color: $green;
   padding: 0;
 }
