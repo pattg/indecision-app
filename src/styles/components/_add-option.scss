@@ -9,6 +9,7 @@
 // Add option
 .add-option {
   display: flex;
+  flex-direction: column;
   padding: $m-size;
 }
 
@@ -17,7 +18,17 @@
   background: lighten($light-blue, 15%);
   border: none;
   border-bottom: 0.4rem solid $off-white;
-  margin-right: $s-size;
+  margin: 0 0 $s-size 0;
   color: $off-white;
   padding: $s-size;
+}
+
+@media (min-width: $desktop-bp) {
+  .add-option {
+    flex-direction: row;
+  }
+
+  .add-option__input {
+    margin: 0 $s-size 0 0;
+  }
 }

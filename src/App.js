@@ -24,7 +24,7 @@ class App extends React.Component {
     }
   }
   handleClearSelectedOption = () => {
-    this.setState(() => ({ selectedOption: undefined }));
+    this.setState({ selectedOption: undefined });
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -35,9 +35,9 @@ class App extends React.Component {
   }
 
   handleDeleteOptions = () => {
-    this.setState(() => ({
+    this.setState({
       options: []
-    }));
+    });
   };
 
   handleDeleteOption = optionToRemove => {
