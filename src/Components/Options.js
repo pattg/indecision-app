@@ -9,6 +9,7 @@ const Options = props => {
         <button
           className="button button--link"
           onClick={props.handleDeleteOptions}
+          disabled={!props.hasMoreOptions}
         >
           Remove all
         </button>

@@ -1,13 +1,13 @@
 .header {
   background: $off-black;
-  color: white;
+  color: $green;
   margin-bottom: $xl-size;
   padding: $m-size 0;
 }
 
 .header__title {
-  font-size: $xl-size;
-  font-family: 'Pacifico', cursive;
+  font-size: 6rem;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
 }
 

@@ -29,3 +29,10 @@
   color: $green;
   padding: 0;
 }
+.button--link:disabled {
+  background: none;
+  border: none;
+  color: $green;
+  padding: 0;
+  opacity: 0.2;
+}

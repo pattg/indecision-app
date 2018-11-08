@@ -68,7 +68,7 @@ class App extends React.Component {
   };
 
   render() {
-    const subtitle = 'What to do next?';
+    const subtitle = '';
 
     return (
       <div className="App">
@@ -83,6 +83,7 @@ class App extends React.Component {
               options={this.state.options}
               handleDeleteOptions={this.handleDeleteOptions}
               handleDeleteOption={this.handleDeleteOption}
+              hasMoreOptions={this.state.options.length > 1}
             />
             <AddOption handleAddOption={this.handleAddOption} />
           </div>
